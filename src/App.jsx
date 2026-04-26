@@ -1,3 +1,4 @@
+import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar.jsx';
 import Hero from './components/Hero.jsx';
 import IconFeatures from './components/IconFeatures.jsx';
@@ -9,8 +10,9 @@ import Reviews from './components/Reviews.jsx';
 import FAQ from './components/FAQ.jsx';
 import Photostrip from './components/Photostrip.jsx';
 import Footer from './components/Footer.jsx';
+import ForHer from './components/ForHer.jsx';
 
-export default function App() {
+function HomePage() {
   return (
     <>
       <Navbar />
@@ -27,5 +29,15 @@ export default function App() {
       </main>
       <Footer />
     </>
+  );
+}
+
+export default function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/product-category/for-her" element={<ForHer />} />
+      <Route path="/product-category/for-her/" element={<ForHer />} />
+    </Routes>
   );
 }

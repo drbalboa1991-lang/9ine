@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export default function Navbar() {
   return (
     <div id="wrapper-navbar">
@@ -5,7 +7,7 @@ export default function Navbar() {
         <div className="container">
           <div className="navbar-inner d-flex justify-content-between align-items-center w-100">
             <div id="logo-tagline-wrap">
-              <a href="/" className="custom-logo-link" rel="home">
+              <Link to="/" className="custom-logo-link" rel="home">
                 <img
                   src="/assets/sex9ine-logo.png"
                   className="custom-logo"
@@ -13,13 +15,13 @@ export default function Navbar() {
                   width="448"
                   height="192"
                 />
-              </a>
+              </Link>
             </div>
             <nav className="desktop-site-nav d-none d-md-block">
               <ul className="desktop-nav-links text-uppercase">
                 <li><a href="#shop">Shop</a></li>
                 <li><a href="#for-him" className="text-primary">For Him</a></li>
-                <li><a href="#for-her" className="text-secondary">For Her</a></li>
+                <li><Link to="/product-category/for-her" className="text-secondary">For Her</Link></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#faq">FAQ</a></li>
                 <li><a href="#contact">Contact</a></li>
