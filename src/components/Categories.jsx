@@ -1,8 +1,8 @@
 const cats = [
-  '/assets/chews-for-both.png',
-  '/assets/chews-for-him.png',
-  '/assets/chews-for-her.png',
-  '/assets/Swag-for-Both-Category.png',
+  { type: 'video', src: '/assets/chews-for-both.mp4', poster: '/assets/chews-for-both.png' },
+  { type: 'image', src: '/assets/chews-for-him.png' },
+  { type: 'image', src: '/assets/chews-for-her.png' },
+  { type: 'image', src: '/assets/Swag-for-Both-Category.png' },
 ];
 
 export default function Categories() {
@@ -21,10 +21,22 @@ export default function Categories() {
           </div>
         </div>
         <div className="row row-cols-2 row-cols-md-4 text-center">
-          {cats.map((src, i) => (
+          {cats.map((c, i) => (
             <div key={i} className="col mb-4">
               <a href="#shop">
-                <img src={src} alt="" />
+                {c.type === 'video' ? (
+                  <video
+                    src={c.src}
+                    poster={c.poster}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    style={{ width: '100%', height: 'auto', display: 'block' }}
+                  />
+                ) : (
+                  <img src={c.src} alt="" />
+                )}
               </a>
             </div>
           ))}
