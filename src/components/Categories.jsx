@@ -2,7 +2,7 @@ const cats = [
   { type: 'video', src: '/assets/chews-for-both.mp4', poster: '/assets/chews-for-both.png' },
   { type: 'video', src: '/assets/chews-for-him.mp4', poster: '/assets/chews-for-him.png' },
   { type: 'video', src: '/assets/chews-for-her.mp4', poster: '/assets/chews-for-her.png' },
-  { type: 'image', src: '/assets/Swag-for-Both-Category.png' },
+  { type: 'video', src: '/assets/swag-for-both.mp4', poster: '/assets/Swag-for-Both-Category.png' },
 ];
 
 export default function Categories() {
