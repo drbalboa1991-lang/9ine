@@ -1,0 +1,222 @@
+@font-face {
+  font-family: 'Chewy';
+  src: url('/assets/Chewy-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/montserrat:vf@latest/latin-wght-normal.woff2) format('woff2-variations');
+}
+
+:root,
+[data-bs-theme='light'],
+[data-bs-theme='dark'] {
+  --bs-primary: #01d7fe;
+  --bs-secondary: #ff1a81;
+  --bs-success: #bbeb26;
+  --bs-info: #ff5b00;
+  --bs-warning: #feff00;
+  --bs-danger: #ff2d5a;
+  --bs-primary-rgb: 1, 215, 254;
+  --bs-secondary-rgb: 255, 26, 129;
+  --bs-success-rgb: 187, 235, 38;
+  --bs-info-rgb: 255, 91, 0;
+  --bs-warning-rgb: 254, 255, 0;
+  --bs-danger-rgb: 255, 45, 90;
+  --bs-body-font-family: 'Montserrat', system-ui, sans-serif;
+}
+
+body {
+  font-family: 'Montserrat', system-ui, sans-serif;
+  background: #fff;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: 'Chewy', cursive;
+  font-weight: 400;
+}
+
+.bg-primary { background-color: var(--bs-primary) !important; }
+.bg-secondary { background-color: var(--bs-secondary) !important; }
+.text-primary { color: var(--bs-primary) !important; }
+.text-secondary { color: var(--bs-secondary) !important; }
+.text-success { color: var(--bs-success) !important; }
+.text-warning { color: var(--bs-warning) !important; }
+.text-danger { color: var(--bs-danger) !important; }
+.text-info { color: var(--bs-info) !important; }
+
+/* Responsive font sizes (RFS-like helpers used in source) */
+.rfs-37 { font-size: clamp(2.4rem, 5.5vw, 5rem); line-height: 1.05; }
+.rfs-18 { font-size: clamp(1.4rem, 2.4vw, 2.4rem); line-height: 1.1; }
+.rfs-11 { font-size: clamp(1.4rem, 2vw, 2rem); }
+.rfs-9 { font-size: clamp(1.05rem, 1.4vw, 1.4rem); }
+.rfs-8 { font-size: clamp(0.85rem, 1vw, 1rem); }
+
+/* Site nav */
+#wrapper-navbar .navbar { padding: 0.75rem 0; }
+.desktop-nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.75rem;
+  margin: 0;
+  padding: 0;
+  font-family: 'Chewy', cursive;
+  font-size: 1.25rem;
+  letter-spacing: 0.02em;
+}
+.desktop-nav-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+.desktop-nav-links a:hover { opacity: 0.85; }
+.custom-logo { max-height: 80px; width: auto; }
+
+/* Hero */
+.hp-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  border-radius: 0 0 2rem 2rem;
+  position: relative;
+  z-index: 1;
+}
+.hp-hero h1 {
+  font-size: clamp(2.4rem, 5.5vw, 5rem);
+  line-height: 1.05;
+  margin-bottom: 1rem;
+}
+.hp-hero-heading-small {
+  font-size: clamp(1.4rem, 2.4vw, 2.4rem);
+  display: block;
+  line-height: 1;
+}
+.hp-hero p { font-size: clamp(1.05rem, 1.3vw, 1.3rem); margin-bottom: 1.5rem; }
+.hp-hero-col-2 img { width: 100%; height: auto; }
+
+/* Buttons */
+.black-69-btn {
+  background-image: url('/assets/black-btn-bg.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left 8px;
+  padding: 20px 40px;
+  width: 300px;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Chewy', cursive;
+  font-size: 1.5rem;
+  transition: all linear 0.3s;
+}
+.black-69-btn.yellow-69-btn {
+  background-image: url('/assets/Button-Yellow.svg');
+  color: #000;
+  background-position: left 12px !important;
+}
+.black-69-btn:hover {
+  opacity: 0.9;
+  transform: rotate(-2.5deg) scale(1.025);
+  color: #fff;
+}
+.black-69-btn.yellow-69-btn:hover { color: #000; }
+
+/* Icon features */
+.hp-icon img {
+  height: 175px;
+  width: auto;
+  margin-bottom: 1.5rem;
+  object-fit: contain;
+}
+.hp-icon h2 {
+  font-size: clamp(1.6rem, 2.5vw, 2.5rem);
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+/* Section headings */
+section h2 { font-size: clamp(2rem, 4.5vw, 4rem); }
+
+/* Why Sex9ine */
+.key-feature-block {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+.key-feature-block h3 { font-size: clamp(1.5rem, 2.2vw, 2.25rem); margin-bottom: 0.25rem; text-transform: uppercase; }
+.key-feature-block img { width: 75px; height: 75px; flex-shrink: 0; object-fit: contain; }
+.key-feature-block.key-feature-col-2 { flex-direction: row-reverse; text-align: right; }
+.why-sex9ine .col img { max-width: 100%; height: auto; }
+
+/* Categories */
+.hp-categories img { width: 100%; height: auto; transition: transform 0.3s ease; }
+.hp-categories a:hover img { transform: scale(1.04); }
+
+/* Reviews */
+.hp-review-item img:first-child {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.hp-review-item .review-content img { width: 120px; height: auto; }
+.hp-review-item p.h6 { margin-bottom: 0.5rem; }
+
+/* FAQ */
+.hp-faqs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0.25rem 2rem;
+}
+.accordion-button {
+  font-family: 'Chewy', cursive;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+}
+
+/* Photostrip */
+.photostrip-69 { position: relative; }
+.photostrip-69-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.photostrip-69-images img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.photostrip-69-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image: linear-gradient(90deg, #ff2d5a, #feff00, #bbeb26, #01d7fe);
+  background-size: 600% 600%;
+  animation: photostripShift 10s ease infinite;
+  opacity: 0.65;
+  pointer-events: none;
+}
+@keyframes photostripShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Footer */
+#wrapper-footer-colophon { background: #000; color: #c6c6c6; }
+
+@media (max-width: 1200px) {
+  .key-feature-block.key-feature-col-2 { flex-direction: unset; text-align: left; }
+}
+@media (max-width: 992px) {
+  .hp-hero,
+  .hp-faqs { grid-template-columns: 1fr; }
+  .photostrip-69-images { grid-template-columns: 1fr 1fr; }
+  .desktop-site-nav { display: none; }
+}
