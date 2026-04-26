@@ -28,11 +28,14 @@ export default function Categories() {
                   <video
                     src={c.src}
                     poster={c.poster}
-                    autoPlay
                     loop
                     muted
                     playsInline
-                    style={{ width: '100%', height: 'auto', display: 'block' }}
+                    preload="auto"
+                    onMouseEnter={(e) => e.currentTarget.play()}
+                    onMouseLeave={(e) => { e.currentTarget.pause(); e.currentTarget.currentTime = 0; }}
+                    onClick={(e) => e.preventDefault()}
+                    style={{ width: '100%', height: 'auto', display: 'block', pointerEvents: 'auto', cursor: 'pointer' }}
                   />
                 ) : (
                   <img src={c.src} alt="" />
