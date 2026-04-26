@@ -1,8 +1,8 @@
 const cats = [
-  { type: 'video', src: '/assets/chews-for-both.mp4', poster: '/assets/chews-for-both.png' },
-  { type: 'video', src: '/assets/chews-for-him.mp4', poster: '/assets/chews-for-him.png' },
-  { type: 'video', src: '/assets/chews-for-her.mp4', poster: '/assets/chews-for-her.png' },
-  { type: 'video', src: '/assets/swag-for-both.mp4', poster: '/assets/Swag-for-Both-Category.png' },
+  '/assets/chews-for-both.gif',
+  '/assets/chews-for-him.gif',
+  '/assets/chews-for-her.gif',
+  '/assets/swag-for-both.gif',
 ];
 
 export default function Categories() {
@@ -21,25 +21,14 @@ export default function Categories() {
           </div>
         </div>
         <div className="row row-cols-2 row-cols-md-4 text-center">
-          {cats.map((c, i) => (
+          {cats.map((src, i) => (
             <div key={i} className="col mb-4">
               <a href="#shop">
-                {c.type === 'video' ? (
-                  <video
-                    src={c.src}
-                    poster={c.poster}
-                    loop
-                    muted
-                    playsInline
-                    preload="auto"
-                    onMouseEnter={(e) => e.currentTarget.play()}
-                    onMouseLeave={(e) => { e.currentTarget.pause(); e.currentTarget.currentTime = 0; }}
-                    onClick={(e) => e.preventDefault()}
-                    style={{ width: '100%', aspectRatio: '425 / 718', height: 'auto', objectFit: 'cover', display: 'block', cursor: 'pointer' }}
-                  />
-                ) : (
-                  <img src={c.src} alt="" />
-                )}
+                <img
+                  src={src}
+                  alt=""
+                  style={{ width: '100%', aspectRatio: '425 / 718', objectFit: 'cover', display: 'block' }}
+                />
               </a>
             </div>
           ))}
