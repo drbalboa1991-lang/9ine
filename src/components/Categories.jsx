@@ -35,7 +35,7 @@ export default function Categories() {
                     onMouseEnter={(e) => e.currentTarget.play()}
                     onMouseLeave={(e) => { e.currentTarget.pause(); e.currentTarget.currentTime = 0; }}
                     onClick={(e) => e.preventDefault()}
-                    style={{ width: '100%', height: 'auto', display: 'block', pointerEvents: 'auto', cursor: 'pointer' }}
+                    style={{ width: '100%', aspectRatio: '425 / 718', height: 'auto', objectFit: 'cover', display: 'block', cursor: 'pointer' }}
                   />
                 ) : (
                   <img src={c.src} alt="" />
