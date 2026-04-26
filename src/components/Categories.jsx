@@ -1,6 +1,6 @@
 const cats = [
   { type: 'video', src: '/assets/chews-for-both.mp4', poster: '/assets/chews-for-both.png' },
-  { type: 'image', src: '/assets/chews-for-him.png' },
+  { type: 'video', src: '/assets/chews-for-him.mp4', poster: '/assets/chews-for-him.png' },
   { type: 'image', src: '/assets/chews-for-her.png' },
   { type: 'image', src: '/assets/Swag-for-Both-Category.png' },
 ];
