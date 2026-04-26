@@ -2,7 +2,7 @@ const icons = [
   { type: 'video', src: '/assets/energy-icon.mp4', poster: '/assets/energy-icon.png', cls: 'text-warning', label: ['Fast', 'Energy'] },
   { type: 'video', src: '/assets/usa-icon.mp4', poster: '/assets/usa-icon.png', cls: 'text-primary', label: ['Made in', 'the USA'] },
   { type: 'video', src: '/assets/chemistry-icon.mp4', poster: '/assets/chemistry-icon.png', cls: 'text-success', label: ['Clean', 'Formula'] },
-  { type: 'image', src: '/assets/genders-icon.png', cls: 'text-secondary', label: ['For Him', '& Her'] },
+  { type: 'video', src: '/assets/genders-icon.mp4', poster: '/assets/genders-icon.png', cls: 'text-secondary', label: ['For Him', '& Her'] },
 ];
 
 export default function IconFeatures() {
