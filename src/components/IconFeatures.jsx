@@ -22,14 +22,11 @@ export default function IconFeatures() {
                   preload="auto"
                   onMouseEnter={(e) => e.currentTarget.play()}
                   onMouseLeave={(e) => { e.currentTarget.pause(); e.currentTarget.currentTime = 0; }}
-                  style={{ height: '175px', width: 'auto', marginBottom: '1.5rem', objectFit: 'contain', cursor: 'pointer' }}
+                  style={{ height: '320px', width: '100%', maxWidth: '320px', objectFit: 'contain', cursor: 'pointer' }}
                 />
               ) : (
-                <img src={i.src} alt="" />
+                <img src={i.src} alt={`${i.label[0]} ${i.label[1]}`} />
               )}
-              <h2 className={i.cls}>
-                {i.label[0]}<br />{i.label[1]}
-              </h2>
             </div>
           ))}
         </div>
