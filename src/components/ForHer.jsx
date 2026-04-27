@@ -37,9 +37,12 @@ export default function ForHer() {
         {/* Hero */}
         <section className="mb-5">
           <div className="position-relative" style={{ borderRadius: '0 0 2rem 2rem', overflow: 'hidden' }}>
-            <img
-              src="/assets/for-her-hero.gif"
-              alt="Sex9ine For Her"
+            <video
+              src="/assets/for-her-hero.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
               style={{ width: '100%', display: 'block', maxHeight: '85vh', objectFit: 'cover', objectPosition: 'center top' }}
             />
             <div style={{
