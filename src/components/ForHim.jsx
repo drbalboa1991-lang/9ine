@@ -37,9 +37,12 @@ export default function ForHim() {
         {/* Hero */}
         <section className="mb-5">
           <div style={{ borderRadius: '0 0 2rem 2rem', overflow: 'hidden' }}>
-            <img
-              src="/assets/sex9ine-for-him-test-feature-2.png"
-              alt="Sex9ine For Him"
+            <video
+              src="/assets/for-him-hero.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
               style={{ width: '100%', display: 'block', maxHeight: '85vh', objectFit: 'cover', objectPosition: 'center top' }}
             />
           </div>
