@@ -20,7 +20,7 @@ export default function Navbar() {
             <nav className="desktop-site-nav d-none d-md-block">
               <ul className="desktop-nav-links text-uppercase">
                 <li><a href="#shop">Shop</a></li>
-                <li><a href="#for-him" className="text-primary">For Him</a></li>
+                <li><Link to="/product-category/for-him" className="text-primary">For Him</Link></li>
                 <li><Link to="/product-category/for-her" className="text-secondary">For Her</Link></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#faq">FAQ</a></li>

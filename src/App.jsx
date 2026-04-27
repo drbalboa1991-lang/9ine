@@ -11,6 +11,7 @@ import FAQ from './components/FAQ.jsx';
 import Photostrip from './components/Photostrip.jsx';
 import Footer from './components/Footer.jsx';
 import ForHer from './components/ForHer.jsx';
+import ForHim from './components/ForHim.jsx';
 
 function HomePage() {
   return (
@@ -38,6 +39,8 @@ export default function App() {
       <Route path="/" element={<HomePage />} />
       <Route path="/product-category/for-her" element={<ForHer />} />
       <Route path="/product-category/for-her/" element={<ForHer />} />
+      <Route path="/product-category/for-him" element={<ForHim />} />
+      <Route path="/product-category/for-him/" element={<ForHim />} />
     </Routes>
   );
 }
