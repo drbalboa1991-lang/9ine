@@ -15,7 +15,7 @@ export default function IconFeatures() {
               <img
                 src={i.gif}
                 alt={i.label.join(' ')}
-                style={{ width: '240px', height: '240px', objectFit: 'cover', borderRadius: '1.75rem', display: 'block', margin: '0 auto' }}
+                style={{ height: '320px', width: '100%', maxWidth: '320px', objectFit: 'contain' }}
               />
             </div>
           ))}
