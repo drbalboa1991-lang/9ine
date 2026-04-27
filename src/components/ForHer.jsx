@@ -55,7 +55,7 @@ export default function ForHer() {
                     </p>
                   </div>
                   <div className="hp-hero-col-2">
-                    <img src="/assets/sex9ine-for-her-test-feature.png" alt="Sex9ine For Her" />
+                    <img src="/assets/for-her-hero.gif" alt="Sex9ine For Her" />
                   </div>
                 </div>
               </div>
