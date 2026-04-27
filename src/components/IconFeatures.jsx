@@ -1,8 +1,8 @@
 const icons = [
   { gif: '/assets/energy-icon.gif', label: ['Fast', 'Energy'] },
-  { gif: '/assets/usa-icon.gif', label: ['Made in', 'the USA'] },
-  { gif: '/assets/chemistry-icon.gif', label: ['Clean', 'Formula'] },
   { gif: '/assets/genders-icon.gif', label: ['For Him', '& Her'] },
+  { gif: '/assets/chemistry-icon.gif', label: ['Clean', 'Formula'] },
+  { gif: '/assets/usa-icon.gif', label: ['Made in', 'the USA'] },
 ];
 
 export default function IconFeatures() {
