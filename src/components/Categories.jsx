@@ -23,11 +23,11 @@ export default function Categories() {
         <div className="row row-cols-2 row-cols-md-4 text-center">
           {cats.map((src, i) => (
             <div key={i} className="col mb-4">
-              <a href="#shop">
+              <a href="#shop" style={{ display: 'block', borderRadius: '1.5rem', overflow: 'hidden' }}>
                 <img
                   src={src}
                   alt=""
-                  style={{ width: '100%', aspectRatio: '425 / 718', objectFit: 'cover', display: 'block' }}
+                  style={{ width: '100%', aspectRatio: '360 / 595', objectFit: 'cover', display: 'block' }}
                 />
               </a>
             </div>
