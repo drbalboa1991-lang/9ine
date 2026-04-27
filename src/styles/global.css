@@ -118,7 +118,8 @@ h1, h2, h3, h4, h5, h6,
   text-transform: uppercase;
   font-family: 'Chewy', cursive;
   font-size: 1.5rem;
-  transition: all linear 0.3s;
+  transition: transform 220ms cubic-bezier(0.34, 1.56, 0.64, 1), opacity 150ms ease;
+  will-change: transform;
 }
 .black-69-btn.yellow-69-btn {
   background-image: url('/assets/Button-Yellow.svg');
@@ -127,10 +128,15 @@ h1, h2, h3, h4, h5, h6,
 }
 .black-69-btn:hover {
   opacity: 0.9;
-  transform: rotate(-2.5deg) scale(1.025);
+  transform: rotate(-2.5deg) scale(1.05);
   color: #fff;
 }
+.black-69-btn:active {
+  transform: scale(0.97) !important;
+  transition-duration: 100ms;
+}
 .black-69-btn.yellow-69-btn:hover { color: #000; }
+.black-69-btn.yellow-69-btn:active { color: #000; }
 
 /* Icon features */
 .hp-icon img {
@@ -160,8 +166,28 @@ section h2 { font-size: clamp(2rem, 4.5vw, 4rem); }
 .why-sex9ine .col img { max-width: 100%; height: auto; }
 
 /* Categories */
-.hp-categories img { width: 100%; height: auto; transition: transform 0.3s ease; }
-.hp-categories a:hover img { transform: scale(1.04); }
+.hp-categories img { width: 100%; height: auto; transition: transform 280ms cubic-bezier(0.34, 1.56, 0.64, 1); will-change: transform; }
+.hp-categories a:hover img { transform: scale(1.05); }
+
+/* Product cards */
+.product-card img { transition: transform 250ms cubic-bezier(0.34, 1.56, 0.64, 1) !important; will-change: transform; }
+.product-card img:hover { transform: scale(1.06) !important; }
+
+/* Nav links */
+.desktop-nav-links a { transition: opacity 150ms ease, transform 150ms ease; }
+.desktop-nav-links a:hover { opacity: 0.85; transform: translateY(-1px); }
+
+/* Scroll reveal */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 420ms cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 420ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+[data-reveal].revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 /* Reviews */
 .hp-review-item img:first-child {

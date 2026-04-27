@@ -12,21 +12,23 @@ import Photostrip from './components/Photostrip.jsx';
 import Footer from './components/Footer.jsx';
 import ForHer from './components/ForHer.jsx';
 import ForHim from './components/ForHim.jsx';
+import { useScrollReveal } from './hooks/useScrollReveal.js';
 
 function HomePage() {
+  useScrollReveal();
   return (
     <>
       <Navbar />
       <main id="theme-main">
         <Hero />
-        <IconFeatures />
-        <FeatureImage />
-        <MostWanted />
-        <WhySex9ine />
-        <Categories />
-        <Reviews />
-        <FAQ />
-        <Photostrip />
+        <div data-reveal data-reveal-delay="0"><IconFeatures /></div>
+        <div data-reveal data-reveal-delay="0"><FeatureImage /></div>
+        <div data-reveal data-reveal-delay="0"><MostWanted /></div>
+        <div data-reveal data-reveal-delay="0"><WhySex9ine /></div>
+        <div data-reveal data-reveal-delay="0"><Categories /></div>
+        <div data-reveal data-reveal-delay="0"><Reviews /></div>
+        <div data-reveal data-reveal-delay="0"><FAQ /></div>
+        <div data-reveal data-reveal-delay="0"><Photostrip /></div>
       </main>
       <Footer />
     </>
